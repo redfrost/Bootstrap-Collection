@@ -868,7 +868,7 @@
         if (defaults[key] != value) options[key] = value
       }, this)
 
-      var self = $(e.currentTarget)[this.type](this._options).data(this.type)
+      self = $(e.currentTarget)[this.type](options).data(this.type)
 
       if (!self.options.delay || !self.options.delay.show) return self.show()
 
@@ -1308,10 +1308,11 @@
     if (typeof offsetTop == 'function') offsetTop = offset.top()
     if (typeof offsetBottom == 'function') offsetBottom = offset.bottom()
 
-    affix = this.unpin != null && (scrollTop + this.unpin <= position.top) ?
-      false    : offsetBottom != null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ?
-      'bottom' : offsetTop != null && scrollTop <= offsetTop ?
-      'top'    : false
+var before_y_bool = (offsetTop != null && scrollTop < offsetTop)
+    , inside_y_bool = (scrollTop >= offsetTop && scrollTop <= scrollHeight-offsetBottom-this.$element.height()-(this.unpin != null ? this.unpin : 0) )
+    , before_offset_bottom_bool = (offsetBottom != null && (position.top + this.$element.height() <= scrollHeight - offsetBottom))
+
+affix = before_y_bool ? 'top' : (inside_y_bool && before_offset_bottom_bool) ? false : 'bottom'
 
     if (this.affixed === affix) return
 
