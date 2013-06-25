@@ -13,4 +13,18 @@ Bootstrap
 [3] Download and rename to base.css(and ~.min.css)
 
 
+## Optional
+
+#### iPad Portrait mode: 
+- Content width: 720px
+- Number of columns: 12 
+- Column width: 38px 
+- Gutter width: 24px 
+
+#### iPad Landscape mode: 
+- Content width: 968px
+- Number of columns: 12
+- Column width: 55px 
+- Gutter width: 28px 
+
 
