@@ -1,5 +1,51 @@
-Bootstrap
-=========
+Bootstrap 3
+===========
+
+#### Custom Setting:
+
+1. Customise: http://getbootstrap.com/customize/
+2. Uncheck Glyphicons (Use Font-awesome instead)
+3. Change @grid-float-breakpoint > @screen-md-min
+4. Change CSS `html { font-size: 62.5%; }` to `100%`
+5. Add `container { width: 100% }`, then use `max-width` to control fluid width.
+6. Use default grid `col-sm-x` in HTML markup.
+
+
+#### Container width (30px gutter)
+* 960 content width: 990px
+* 994 content width: 1024px
+* 1140 content width: 1170px
+* 1170 content width: 1200px
+
+
+#### Media Query Breakpoint
+
+```
+/* Desktop */
+@media (min-width: 1200px) { }
+
+/* Laptop */
+@media (min-width: 992px) and (max-width: 1199px) { }
+
+/* Tablet Horizontal */
+@media (min-width: 768px) and (max-width: 991px) { }
+
+/* Tablet Vertical */
+@media (max-width: 767px) { }
+
+/* Mobile */
+@media (max-width: 480px) { }
+
+/* Print */
+@media print { }
+```
+
+
+
+
+
+Bootstrap 2
+===========
 
 [1] Customised Bootstrap. 12 col / 960px content width.
 
