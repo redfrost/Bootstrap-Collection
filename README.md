@@ -7,8 +7,7 @@ Bootstrap 3
 2. Uncheck Glyphicons (Use Font-awesome instead)
 3. Change @grid-float-breakpoint > @screen-md-min
 4. Change CSS `html { font-size: 62.5%; }` to `100%`
-5. Add `container { width: 100% }`, then use `max-width` to control fluid width.
-6. Use default grid `col-sm-x` in HTML markup.
+5. Use default grid `col-sm-x` in HTML markup.
 
 
 #### Container width (30px gutter)
